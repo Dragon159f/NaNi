@@ -7,13 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Your CSS Linked Below-->
     <link rel="stylesheet" href="css/index.css">
+    
+<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB2YbtmHN5SmWom3sNSlRBhpEqUdwKtZYE",
+    authDomain: "nanidb-3cb5e.firebaseapp.com",
+    databaseURL: "https://nanidb-3cb5e.firebaseio.com",
+    projectId: "nanidb-3cb5e",
+    storageBucket: "",
+    messagingSenderId: "813012911217"
+  };
+  firebase.initializeApp(config);
+</script>
   </head>
   <body>
     <h1>Team NaNi</h1>
     <div>
       <textarea placeholder="IMG URL"></textarea>
       <textarea placeholder="Caption"></textarea>
-      <button>Submit</button>
+      <input class="btn btn-primary" type="submit" value="Submit">
     </div>
     
     
