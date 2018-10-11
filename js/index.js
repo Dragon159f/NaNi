@@ -8,5 +8,11 @@ test();
 $("#subbtn").click(){
     var imgUrl = $("#imageInput").val();
     var string = $("#textInput").val();
-    
+
 }
+var database = firebase.database();
+var databaseRef = database.ref('/');
+databaseRef.once('value').then(function(snapshot) {
+  const dbValue = snapshot.val();
+  console.log(dbValue);
+$("#cats").append("<li>" + dbValue.neko.neko1 + "</li>");
