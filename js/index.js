@@ -13,6 +13,6 @@ $("#subbtn").click(){
 var database = firebase.database();
 var databaseRef = database.ref('/');
 databaseRef.once('value').then(function(snapshot) {
-  const dbValue = snapshot.val();
-  console.log(dbValue);
-$("#cats").append("<li>" + dbValue.neko.neko1 + "</li>");
+  const databaseValues = snapshot.val();
+  console.log(databaseValues);
+$("#cats").append("<li>" + databaseValues.neko.neko1 + "</li>");
