@@ -15,4 +15,4 @@ var databaseRef = database.ref('/');
 databaseRef.once('value').then(function(snapshot) {
   const dbValue = snapshot.val();
   console.log(dbValue);
-$("#cats").append("<li>" + dbValue.neko.neko1 + "</li>");
+$("#cats").append("<li>" + databaseValues["neko"][neko1] + "</li>");
