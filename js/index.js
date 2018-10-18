@@ -5,11 +5,6 @@ console.log('test');
 
 test();
 
-$("#subbtn").click(){
-    var imgUrl = $("#imageInput").val();
-    var string = $("#textInput").val();
-
-}
 var database = firebase.database();
 var databaseRef = database.ref('/');
 databaseRef.once('value').then(function(snapshot) {
