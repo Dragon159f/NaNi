@@ -5,14 +5,14 @@ console.log('test');
 
 test();
 
-$("#subbtn").click(){
+$("#subbtn").click(function(){
     var imgUrl = $("#imageInput").val();
     var string = $("#textInput").val();
-
-}
+});
 var database = firebase.database();
 var databaseRef = database.ref('/');
 databaseRef.once('value').then(function(snapshot) {
-  const dbValue = snapshot.val();
-  console.log(dbValue);
-$("#cats").append("<li>" + databaseValues["neko"][neko1] + "</li>");
+  const databaseValues = snapshot.val();
+  console.log(databaseValues);
+});
+//$("#cats").append("<li>" + databaseValues["neko"][neko1] + "</li>");
