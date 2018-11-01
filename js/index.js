@@ -1,5 +1,5 @@
 // Write your JS here
-import test from './script2.js';
+import test from './database.js';
 
 console.log('test');
 
@@ -11,5 +11,4 @@ databaseRef.once('value').then(function(snapshot) {
   const databaseValues = snapshot.val();
   console.log(databaseValues);
 $("#cats").append("<li>" + databaseValues.neko.neko1 + "</li>");
-
 });
