@@ -13,8 +13,9 @@ databaseRef.once('value').then(function(snapshot) {
 $("#cats").append("<li>" + databaseValues.neko.neko1 + "</li>");
 ref.set({
   threads: [
-    comments{
-      messages: "fda";
+    {
+      messages: "fda",
     }
   ]
+  });
 });
