@@ -11,4 +11,11 @@ databaseRef.once('value').then(function(snapshot) {
   const databaseValues = snapshot.val();
   console.log(databaseValues);
 $("#cats").append("<li>" + databaseValues.neko.neko1 + "</li>");
+ref.set({
+  threads: [
+    {
+      messages: "fda",
+    }
+  ]
+  });
 });
