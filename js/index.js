@@ -1,5 +1,6 @@
 // Write your JS here
-import test from './database.js';
+import {test, pushToDatabase} from './database.js';
+
 
 console.log('test');
 
@@ -10,6 +11,7 @@ var databaseRef = database.ref('/');
 databaseRef.once('value').then(function(snapshot) {
   const databaseValues = snapshot.val();
   console.log(databaseValues);
+
 $("#cats").append("<li>" + databaseValues.neko.neko1 + "</li>");
 ref.set({
   threads: [
@@ -19,3 +21,5 @@ ref.set({
   ]
   });
 });
+
+pushToDatabase(titleInput, imageInput, textInput, databaseRef);
