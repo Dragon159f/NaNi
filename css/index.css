@@ -3,19 +3,13 @@
     text-align: center;
     margin-top: 20px;
 }
-#imageInput{
+#imageInput, #textInput, #titleInput{
     height: 50px;
     width: 200px;
     text-align: center;
     margin: 10px;
 }
-#textInput{
-    height: 50px;
-    width: 200px;
-    text-align: center;
-    margin: 10px;
-    
-}
+
 #subBtn{
     margin: 10px;
 }
