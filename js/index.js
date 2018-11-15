@@ -10,7 +10,8 @@ var database = firebase.database();
 var databaseRef = database.ref('/');
 databaseRef.once('value').then(function(snapshot) {
   const databaseValues = snapshot.val();
-  console.log(databaseValues);
+  console.log("my data",databaseValues);
+
 
 $("#cats").append("<li>" + databaseValues.neko.neko1 + "</li>");
 ref.set({
