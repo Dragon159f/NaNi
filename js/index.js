@@ -1,6 +1,5 @@
 // Write your JS here
-import {test, pushToDatabase} from './database.js';
-import { displayData } from './display.js';
+import {test, Thread} from './database.js';
 
 
 console.log('test');
@@ -23,5 +22,9 @@ databaseRef.once('value').then(function(snapshot) {
 */
 });
 
+$("subbtn").click( function(){
 
-pushToDatabase(titleInput, imageInput, textInput, databaseRef);
+  let thread = new Thread($("titleInput").val(), $("imageInput").val(), $("textInput").val())
+  thread.pushToDatabase();
+  
+});
