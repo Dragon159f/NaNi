@@ -1,5 +1,6 @@
 // Write your JS here
 import {test, Thread} from './database.js';
+import { displayData } from './display.js'; 
 
 
 console.log('test');
