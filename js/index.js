@@ -10,16 +10,16 @@ var database = firebase.database();
 var databaseRef = database.ref('/');
 databaseRef.once('value').then(function(snapshot) {
   const databaseValues = snapshot.val();
-  console.log(databaseValues);
-
-$("#cats").append("<li>" + databaseValues.neko.neko1 + "</li>");
-ref.set({
+  console.log("my data",databaseValues);
+  displayData(databaseValues);
+/*ref.push({
   threads: [
     {
       messages: "fda",
     }
   ]
   });
+*/
 });
 
 $("subbtn").click( function(){
