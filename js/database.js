@@ -1,3 +1,5 @@
+import {databaseRef} from './index.js';
+
 export function test () {
   console.log('test2')
 };
@@ -9,12 +11,12 @@ export class Thread {
     this.cptInput = cptInput;
   }
   pushToDatabase(){
-    let newThread = [{
-      title: this.titleInput,
-      image: this.imgURLInput,
-      caption: this.cptInput
-    }]
-    ref.push(newThread);
+    let newThread = {
+      Title: this.titleInput,
+      ImageUrl: this.imgURLInput,
+      Caption: this.cptInput
+    }
+    databaseRef.push(newThread);
   
     return console.log("Sent.");
   }

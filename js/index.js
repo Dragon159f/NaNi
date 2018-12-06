@@ -8,7 +8,7 @@ console.log('test');
 test();
 
 var database = firebase.database();
-var databaseRef = database.ref('/');
+export var databaseRef = database.ref('/');
 databaseRef.once('value').then(function(snapshot) {
   const databaseValues = snapshot.val();
   console.log("my data",databaseValues);
@@ -23,9 +23,9 @@ databaseRef.once('value').then(function(snapshot) {
 */
 });
 
-$("subbtn").click( function(){
+$("#subbtn").click( function(){
 
-  let thread = new Thread($("titleInput").val(), $("imageInput").val(), $("textInput").val())
+  let thread = new Thread($("#titleInput").val(), $("#imageInput").val(), $("#textInput").val())
   thread.pushToDatabase();
   
 });
