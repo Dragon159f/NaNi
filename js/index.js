@@ -1,5 +1,5 @@
 // Write your JS here
-import {test, pushToDatabase} from './database.js';
+import {test, Thread} from './database.js';
 
 
 console.log('test');
@@ -22,4 +22,9 @@ ref.set({
   });
 });
 
-pushToDatabase(titleInput, imageInput, textInput, databaseRef);
+$("subbtn").click( function(){
+
+  let thread = new Thread($("titleInput").val(), $("imageInput").val(), $("textInput").val())
+  thread.pushToDatabase();
+  
+});
