@@ -7,14 +7,14 @@ export function test () {
 export class Thread {
   constructor(titleInput, imgURLInput, cptInput, ref){
     this.titleInput = titleInput;
-    this.imgURLInput = imgURLInput;
     this.cptInput = cptInput;
+    this.imgURLInput = imgURLInput;
   }
   pushToDatabase(){
     let newThread = {
       Title: this.titleInput,
-      ImageUrl: this.imgURLInput,
-      Caption: this.cptInput
+      Caption: this.cptInput,
+      ImageUrl: this.imgURLInput
     }
     databaseRef.push(newThread);
   

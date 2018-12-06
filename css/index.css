@@ -13,3 +13,8 @@
 #subBtn{
     margin: 10px;
 }
+
+#captionDisplay{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
