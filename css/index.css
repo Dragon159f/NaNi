@@ -18,3 +18,6 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 20px;
 }
+#teamName, #addPic{
+    text-align: center;
+}
