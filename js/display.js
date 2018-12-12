@@ -12,7 +12,6 @@ $("#subbtn").click(function(){
 
 export function displayData(data){
   for(let name in data){
-    //Appends the Image into the Content id
     $("#content").append("<div class='card col-3' style='width: 18rem;'>" + 
     "<img id='imgDisplay' class='card-img-top' src=" + data[name].ImageUrl + ">" + 
     "<div class='card-body'>" + 
