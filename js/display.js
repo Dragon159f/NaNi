@@ -13,9 +13,9 @@ $("#subbtn").click(function(){
 export function displayData(data){
   for(let name in data){
     $("#content").append("<div class='card col-3' style='width: 18rem;'>" + 
-    "<img id='imgDisplay' class='card-img-top' src=" + data[name].ImageUrl + ">" + 
+    "<h2 class='card-title' id='titleDisplay'>" + data[name].Title + "</h2>" + 
     "<div class='card-body'>" + 
-    "<h5 class='card-title' id='titleDisplay'>" + data[name].Title + "</h5>" + 
+    "<img id='imgDisplay' class='card-img-top' src=" + data[name].ImageUrl + ">" + 
     "<p id='captionDisplay' class='card-text'>" + data[name].Caption + "</p>" + 
     "</div>" + 
     "</div>");    
